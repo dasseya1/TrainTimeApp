@@ -1,118 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-  <!-- Basic Page Needs
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Train Time App</title>
-  <meta name="description" content="This app helps you know the arrival time of the next train.">
-  <meta name="author" content="Damien Asseya">
+    <meta charset="utf-8">
+    <title>Train Time App</title>
+    <meta name="description" content="This app helps you know the arrival time of the next train.">
+    <meta name="author" content="Damien Asseya">
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- FONT
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
-  
-   <!-- CSS
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
+
 <body>
 
-	<!-- Train Time Tracker -->
+    <!-- Train Time Tracker -->
     <div class="container">
 
-      <!-- Jumbotron -->
-      	<div class="jumbotron" style="background-color: #A0522D; color: white">
-	        <h1 class="text-center">Anytime is Train Time</h1>
-	        <h3 class="text-center">Choo Choo. Chee Chee.</h3>
-      	</div>
+        <!-- Jumbotron -->
+        <div class="jumbotron" style="background-color: #A0522D; color: white">
+            <h1 class="text-center">Anytime is Train Time</h1>
+            <h3 class="text-center">Choo Choo. Chee Chee.</h3>
+        </div>
 
-      	<div class="row">
+        <div class="row">
 
-	        <div class="col-lg-12">
-	
-	        <!-- Current Train Schedule-->
-	          <div class="panel panel-primary">
-	            <div class="panel-heading">
-	              <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
-	            </div>
-	            <div class="panel-body">
-	              <table class="table table-hover" id='train-table'>
-	                <thead>
-	                  <tr>
-	                    <th>Train Name</th>
-	                    <th>Destination</th>
-	                    <th>Frequency (min)</th>
-	                    <th>Next Arrival</th>
-	                    <th>Minute Away</th>
-	                  </tr>
-	                </thead>
-	                <tbody>
-	                </tbody>
-	              </table>
-	            </div>
-	          </div>
-	
-	          <!-- Add Train  -->
-	          <div class="panel panel-primary">
-	            <div class="panel-heading">
-	              <h3 class="panel-title"><strong>Add Train</strong></h3>
-	            </div>
-	            <div class="panel-body">
-	
-	              <!-- Entry Form -->
-	              <form>
-	                <div class="form-group">
-	                  <label for="train-name-input">Train Name</label>
-	                  <input class="form-control" id="train-name-input" type="text">
-	                </div>
-	                <div class="form-group">
-	                  <label for="destination-input">Destination</label>
-	                  <input class="form-control" id="destination-input" type="text">
-	                </div>
-	                <div class="form-group">
-	                  <label for="time-input">First Train Time (HH:mm - military time)</label>
-	                  <input class="form-control" id="time-input" type="text">
-	                </div>
-	                <div class="form-group">
-	                  <label for="frequency-input">Frequency (min)</label>
-	                  <input class="form-control" id="frequency-input" type="text">
-	                </div>
-	                <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
-	              </form>
-	
-	            </div>
-	
-	          </div>
-	
-	        </div>
+            <div class="col-lg-12">
 
-      	</div>
-      	<hr>
-      	<footer>
-        	<p class="text-center">&copy; 2017 Damien Asseya - All Rights Reserved.</p>
-      	</footer>
-    </div> <!-- /container -->
- 
+                <!-- Current Train Schedule-->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover" id='train-table'>
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minute Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-  <script src="js/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+                <!-- Add Train  -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Add Train</strong></h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <!-- Entry Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="train-name-input">Train Name</label>
+                                <input class="form-control" id="train-name-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination-input">Destination</label>
+                                <input class="form-control" id="destination-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="time-input">First Train Time (HH:mm - military time)</label>
+                                <input class="form-control" id="time-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency-input">Frequency (min)</label>
+                                <input class="form-control" id="frequency-input" type="text">
+                            </div>
+                            <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <hr>
+        <footer>
+            <p class="text-center">&copy; 2017 Damien Asseya - All Rights Reserved.</p>
+        </footer>
+    </div>
+    <!-- /container -->
 
 
-	
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
 </body>
 </html>
