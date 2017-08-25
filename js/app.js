@@ -44,7 +44,7 @@ $(document).ready(function() {
         $("#time-input").val("");
         $("#frequency-input").val("");
 
-        // Prevents moving to new page
+        // Prevent moving to new page
         return false;
     });
 
